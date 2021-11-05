@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C04Paragraph.html</title>
+</head>
+<body>
+    <!-- 
+        수평방향에서의 정렬
+            블럭엘리먼트 : 컨텐츠의 양에 상관없이 하나의 블럭을 차지함으로
+                우측공간이 충분하여 컨텐츠는 우측으로 정렬할 수 잇다.
+            인라인엘리먼트 : 컨텐츠의 크기만큼만 영역을 차지함으로 컨텐츠가
+                움직일 공간이 없어 정렬되지 않는다. 만약 정렬이 필요하다면
+                부모 엘리먼트에서 text-align을 설정해야 한다.
+     -->
+    <h2>문단관련 CSS 속성들</h2>
+    <div style="border:1px dotted blue; width: 400px;"> 
+        <!-- 우측정렬됨 -->
+        <div style="border:1px solid red; text-align: right;">
+            블럭엘리먼트
+        </div>
+        <!-- 우측 공간이 부족함으로 정렬안됨.
+             정렬이 필요하다면 부모 엘리먼트를 추가한 후 부모쪽에서 align을 적용해야 한다. -->
+        <div style="text-align: right;">
+            <span style="border:1px solid blue; text-align: right;">
+                인라인엘리먼트
+            </span>
+        </div>
+    </div>
+
+    <!-- 
+        line-height: 줄간격, 즉, 라인사이의 간격을 띄우는데 블럭과 인라인은 조금 다르게 적용된다.
+            블럭엘리먼트 : 컨텐츠의 영역 중 세로 영역이 늘어나서 마치 줄간격이 생긴것처럼 보인다.
+            일라인엘리먼트 : 컨텐츠의 영역은 변화가 없고 적정된 크기만큼 줄간격이 생겨 사이가 멀어진다.
+     -->
+    <h3>줄사이의 간격</h3>
+    <h4 style="line-height: 5em; border:1px solid blue;">
+        블럭엘이먼트1에 줄간격 적용
+    </h4>
+    <h4 style="border:0px solid black;">블럭엘리먼트2</h4>
+    <h4 style="border:0 px solid black;">블럭엘리먼트3</h4>
+
+    <div class="inline">
+        <span style="border: 1px solid black;">인라인엘이먼트2</span>
+        <br>
+        <span style="border: 1px solid black;">인라인엘이먼트3</span>
+    </div>
+
+    <h3>수직상태에서의 가운데 정렬</h3>
+     <!-- div박스의 height의 값을 동일하게 저장하면 세로상태에서 가운데 정렬이 된다.
+        블럭엘리먼트에 line-height를 부여했을때 영역이 늘어나는 부분을 활용한 것이다. -->
+    <h4>블럭엘리먼트 사용시 방법1</h4>
+    <div style="border:1px solid black; height: 200px; width:200px; line-height: 200px;">
+        나는 텍스트1
+    </div>
+
+    <!-- div박스 내부의 padding을 지정해서 텍스트를 아래쪽으로 밀어준다.
+        이 경우 세로영역이 늘어남으로 사이즈는 별도로 조정해야한다. -->
+    <h4>블럭엘리먼트 사용시 방법2</h4>
+    <div style="border:1px solid red; height: 100px; width:200px; padding-top: 100px;">
+        나는 텍스트2
+    </div>
+
+    <!-- 인라인 엘리먼트의 경우 세로상태에서의 가운제 정렬은 vertical_align을 사용한다. -->
+    <!-- 
+        가로정렬 시 text-align -> left(디폴트), center, right
+        세로정렬 시 vertical-align -> top(디폴트), middle, bottom
+     -->
+    <h4>인라인엘이먼트 사용시</h4>
+    <table border="1" width="300">
+        <tr>
+            <td style="height:100px; vertical-align: top;">인라인엘리먼트 세로정렬</td>
+        </tr>
+        <tr>
+            <td style="height:100px; vertical-align: middle;">인라인엘리먼트 세로정렬</td>
+        </tr>
+        <tr>
+            <td style="height:100px; vertical-align: bottom;">인라인엘리먼트 세로정렬</td>
+        </tr>
+    </table>
+
+    <!-- 각기 다른 길이의 단어를 사용함으로써 발생되는 우측의 불규칙적인 여백을
+         깔끔하게 정리해주는 역할을 한다. -->
+    <h2>배분정렬</h2>
+    <p style="border:1px solid blue; text-align: justify;">
+        이같은 매출 상승을 이끈 1등 공신은 역시 '5세대'(5G)다. LG유플러스의 '본업'인 무선사업의 3분기 매출은 전년동기 대비 4.2% 성장한 1조5233억원을 기록했다.
+        <br><br>
+        이동통신과 알뜰폰 가입자를 합친 전체 LG유플러스 무선 가입자도 1749만7000명으로 전년동기 대비 7.6% 늘었다.
+        <br><br>
+        LG유플러스의 3분기 5G 가입자는 직전분기 372만7000명에서 38만1000명이 순증한 410만8000명을 기록하며, 5G 가입자 비중도 21.6%에서 23.5%로 늘었다. 이같은 가입자 순증은 올해 3분기 삼성전자에서 출시한 폴더블폰 갤럭시Z폴드3·플립3가 흥행한 덕으로 풀이된다.
+        <br><br>
+        알뜰폰 가입자는 전년 동기대비 무려 73.4% 늘어난 254만7000명을 기록했다. 직전분기보다도 8.1% 늘어, 알뜰폰 특화 요금제 출시 및 프로모션 지원 등 LG유플러스의 알뜰폰 활성화 정책이 효과를 보고 있는 것으로 풀이된다.
+    </p>
+
+    <h2>들여쓰기</h2>
+    <!-- 블럭엘리먼트는 공간이 충ㅂ ㅜㄴ함으로 text-indent를 통해 들여쓰기가 가능하다. -->
+    <div style="border:1px solid red; text-indent: 1em;">
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+        블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+    </div>
+    <!-- 인라인엘리먼트는 공간이 없음으로 부모엘리먼트에서 패딩을 적용해야 한다. -->
+    <div style="border:1px solid blue; padding-left: 10px;">
+        <span style="text-indent: 1em;">
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+            인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;인라인엘리먼트&nbsp;
+        </span>
+    </div>
+</body>
+</html>

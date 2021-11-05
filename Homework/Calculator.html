@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="./style/style_calc.css"> 
+    <link rel="stylesheet" type="text/css" href="./style/reset.css"> 
+</head>
+<body>
+    <!-- 
+        레이아웃 : table
+        버튼 : input & button
+        LCD : div
+    -->
+    <div id="body-wrap">
+        <header></header>
+
+        <div id="container">
+            <div class="con-wrap">
+                <table class="calc">
+                    <tbody>
+                        <tr class="lcd">
+                            <td colspan="4" rowspan="2">
+                                <div class="lcd_display">
+                                    <p>123+654</p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                        </tr>
+
+                        <tr class="middle">
+                            <td colspan="2">
+                                <button type="button" class="btn_st_gray" name="backspace" value="del">BackSpace</button>
+                            </td>
+                            <td colspan="2">
+                                <button type="reset" class="btn_st_gray" name="cancle" value="reset">C</button>
+                            </td>
+                        </tr>
+
+                        <tr class="key">
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="1">1</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="2">2</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="3">3</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_orange" name="operator" value="/">/</button>
+                            </td>
+                        </tr>
+
+                        <tr class="key">
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="4">4</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="5">5</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="6">6</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_orange" name="operator" value="*">x</button>
+                            </td>
+                        </tr>
+
+                        <tr class="key">
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="7">7</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="8">8</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="9">9</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_orange" name="operator" value="+">+</button>
+                            </td>
+                        </tr>
+
+                        <tr class="key">
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="=">=</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value="0">0</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_black" name="num" value=".">.</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn_st_orange" name="operator" value="-">-</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
