@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberLogin.html</title>
+
+    <link type="text/css" rel="stylesheet" href="./style/style_loginForm.css">
+    <link type="text/css" rel="stylesheet" href="./style/reset.css">
+
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+    <div id="container">
+        <div id=container_wrap>
+            <div class="login_find">
+                <div class="find_select">
+                    <input type="radio" name="accountFind" checked ><span>아이디 찾기</span>
+                    <input type="radio" name="accountFind"><span>비밀번호 찾기</span>
+                </div>
+            
+                <div class="login_find_id">
+                    <ul>                        
+                        <li class="find_id hide"><span>아이디</span><input type="text" value=""></li>
+                        <li class="find_name"><span>이름(대표자명)</span><input type="text" value=""></li>
+                        <li class="find_detail">
+                            <select>
+                                <option value="phoneN">휴대전화</option>
+                                <option value="homeN">집전화</option>
+                                <option value="email">이메일</option>
+                            </select>
+                            
+                            <ul class="find_detail_list">
+                                <li class="">
+                                    <input type="text" name="phone_number1" value="" size="3" maxlength="3">
+                                    <span>-</span>
+                                    <input type="text" name="phone_number2" value="" size="4" maxlength="4">
+                                    <span>-</span>
+                                    <input type="text" name="phone_number3" value="" size="4" maxlength="4">
+                                </li>
+            
+                                <li class="">
+                                    <input type="text" name="home_number1" value="" size="3" maxlength="3">
+                                    <span>-</span>
+                                    <input type="text" name="home_number2" value="" size="4" maxlength="4">
+                                    <span>-</span>
+                                    <input type="text" name="home_number3" value="" size="4" maxlength="4">
+                                </li>
+            
+                                <li class="email_form">
+                                    <input type="text" name="email_front" value="" size="10">
+                                    <span>@</span>
+                                    <input type="text" name="email_back" value="" size="10">
+                                    <select class="email_back_choose">
+                                        <option value="self">직접입력</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="gmail.com">gmail.com</option>    
+                                        <option value="kakao.com">kakao.com</option>    
+                                        <option value="hanmail.net">hanmail.net</option>
+                                        <option value="daum.net">daum.net</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+            
+                    <p class="help_text">아이디를 찾기 위해서 이름과 휴대번호 혹은 이메일을 입력하세요.</p>
+                    <p class="help_text hide">비밀번호를 찾기 위해서 아이디, 이름과 휴대번호 혹은 이메일을 입력하세요.</p>
+                </div>
+            
+            </div>
+        </div>    
+    </div>
+    
+
+    <script type="text/javascript" src="./js/motion.js"></script>
+</body>
+</html>
+

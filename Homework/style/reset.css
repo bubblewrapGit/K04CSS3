@@ -14,7 +14,6 @@ time, mark, audio, video, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	height: inherit;
 	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
